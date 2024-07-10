@@ -1,0 +1,19 @@
+{
+  "name": "test-todo-with-jest-and-supertest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "faker": "^6.6.6",
+    "faker-js": "^1.0.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
