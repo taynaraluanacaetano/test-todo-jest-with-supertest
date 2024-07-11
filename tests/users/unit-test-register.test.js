@@ -1,15 +1,12 @@
 const request = require('supertest');
-const { faker } = require('@faker-js/faker');
-const urlRegister = "http://localhost:8080";
+require('dotenv').config();
+const {
+    payloadNewUserRegister
+} = require('../../fixtures/users/new-users');
+
+const urlRegister = process.env.URL_API_LOCAL;
 
 describe('Realizando testes unitários no endpoint de registro de um novo usuário.', () => {
-    const payloadNewUserRegister = {
-        email: faker.internet.exampleEmail(),
-        first_name: faker.person.fullName(),
-        last_name: faker.person.lastName(),
-        password: faker.internet.password(),
-        username: faker.internet.userName()
-    };
 
     it('Quando inserir um usuário passando todas as informações obrigatórias, e os dados não existirem na base, então deverá ser retornado 201.', async () => {
         try {
